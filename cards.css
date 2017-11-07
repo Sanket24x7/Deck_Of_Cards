@@ -1,0 +1,88 @@
+body{
+  background-image: url('cardHouseBackground.jpg');
+  overflow: hidden;
+  font-family: cursive;
+}
+nav{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.38);
+}
+.restart-play{
+  color: #fff;
+  margin-left: 25px;
+  width: 90px;
+  margin: 0 auto;
+  text-align: center;
+  height: 38px;
+  /*border-bottom-left-radius: 15px;*/
+  /*border-bottom-right-radius: 15px;*/
+  /*background-color: rgba(11, 5, 53, 0.56);*/
+  line-height: 3;
+  font-family: cursive;
+  cursor: pointer;
+  border-bottom: 3px double #fff;
+}
+.restart-play .fa{
+  font-size: 15px;
+}
+.card-desk-area{
+  margin-top: 240px;
+  width: 849px;
+}
+.club, .diamond, .heart, .spade{
+  height: 239px;
+}
+.club .panel, .diamond .panel, .heart .panel, .spade .panel{
+  height: 100%;
+  font-size: 100px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.single-card{
+  position: relative;
+  /*padding: 48px 0;*/
+  height: 190px;
+  margin-top: -174px;
+  list-style-type: none;
+}
+.single-card .icon{
+  width: 100%;
+  font-size: 70px;
+  text-align: center;
+  margin: 51px 0;
+}
+
+.panel.panel-primary{
+  border: 1px solid #d8d5d5;
+  height: 100%;
+  margin-bottom: 0px;
+  box-shadow: 0px 15px 10px 0px;
+}
+.panel .title{
+  width: 35px;
+  text-align: center;
+  position: absolute;
+  left: 20px;
+}
+.card-desk-area{
+  /*height: 460px;*/
+}
+#clubHouse .single-card,#heartHouse .single-card,#diamondHouse .single-card,#spadeHouse .single-card{
+  position: absolute;
+  width: 100%;
+}
+.house-wrapper{
+  /*position: fixed;
+  bottom: 18px;
+  left: 12%;*/
+  margin-top: 190px;
+  width: 849px;
+}
+.house-representative{
+  position: absolute;
+  right: 25px;
+}
