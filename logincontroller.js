@@ -4,13 +4,15 @@ app.controller("loginController", function($scope, $http){
   $scope.psw = "";
   $scope.submit = function(){
     var data = {username: $scope.username, password: $scope.psw};
-    $http.post("localhost:3000/login", data)
+    $http.post("localhost:3001/login", data)
     .then(function(data){
       console.log(data);
-      window.location.href="index.html";
+      console.log("Success");
+      // window.location.href="cardsDeck.html";
     }).catch(function(err){
       console.log(err);
-      window.location.href="index.html";
+      console.log("Err");
+      // window.location.href="cardsDeck.html";
     });
   }
 });

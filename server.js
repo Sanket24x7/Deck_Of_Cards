@@ -17,6 +17,12 @@ app.use(function(req, res, next) {
 // // use it before all route definitions
 // app.use(cors({origin: 'http://localhost:8888'}));
 
+// app.post("/contactList",function(req,res){
+//     console.log(req.body);
+//     db.contactlist.insert(req.body,function(err,doc){
+//       res.json(doc);
+//     });
+// });
 
 app.get('/',function(req,res){
   res.send("Hello world from server.js");
@@ -24,9 +30,12 @@ app.get('/',function(req,res){
 app.post('/login', function(req,res){
   var username = req.body.username;
   var password = req.body.password;
+  console.log(req);
   if(username=="KungFu" && password=="Panda"){
+    res.write("cardsDeck.html");
     res.send("Good One");
   }else {
+    res.write("cardsDeck.html");
     res.send("Try Again");
   }
 })

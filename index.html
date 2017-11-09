@@ -7,80 +7,17 @@
 <link rel="stylesheet" href="bootstrap.css">
 <link rel="stylesheet" href="cards.css">
 <script src="jquery.js"></script>
-<script src="jquery-ui.js"></script>
 <script src="bootstrap.js"></script>
 <script src="angular.1.6.4.js"></script>
-<script src="ui.sortable.js"></script>
-<script src="controller.js"></script>
-<body>
-
-<div ng-app="cardOFdeck" ng-controller="deckController">
-
-<nav class="">
-  <div class="restart-play" ng-click="restartPlay()">
-    <span class="fa fa-refresh"></span>
-    <span>Restart</span>
+<script src="logincontroller.js"></script>
+<body ng-app="login" ng-controller="loginController">
+  <div class="form-group panel panel-default" style="background:black;width:500px;height:250px;border:1px solid #4dd2ff;margin:0 auto;margin-top: 200px;">
+    <div class="panel-heading">Login</div>
+    <div class="panel-body">
+      <div class="form-group" style="margin-top:0px"> <label style="color:white" for="usr">UserName:</label> <input class="form-control" type="text" ng-model="usrname" id="use"> </div>
+      <div class="form-group"> <label style="color:white" for="pwd">Password:</label> <input class="form-control col-sm-1" type="password" ng-model="psw" id="pwd"> </div>
+      <hr>
+      <div class=""> <button class="btn btn-warning" ng-click="submit()">Submit </button> </div>
+      </div>
   </div>
-</nav>
-
-<div class="container card-desk-area">
-  <ul class="" ui-sortable="sortableOptions">
-    <li id="{{card.id}}" class="col-sm-3 single-card" ng-repeat="card in allCards">
-      <div class="panel panel-primary">
-        <div class="title"> {{card.index}} </div>
-        <div class="house-representative fa" ng-class="{'fa-tree': card.house=='Club', 'fa-heart': card.house=='Heart', 'fa-diamond': card.house=='Diamond', 'fa-space-shuttle': card.house=='Spade'}"></div>
-        <div class="fa icon" ng-class="{'fa-tree': card.house==houseConstants.CLUB, 'fa-heart': card.house==houseConstants.HEART, 'fa-diamond': card.house==houseConstants.DIAMOND, 'fa-space-shuttle': card.house==houseConstants.SPADE}"></div>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<div class="container house-wrapper">
-  <div class="row">
-    <div id="clubHouse" class="col-sm-3">
-      <div class="col-sm-12 single-card" ng-repeat="card in clubCards">
-        <div class="panel panel-primary">
-          <div class="title" ng-if="card.index == 0"> All Clubs </div>
-          <div class="title" ng-if="card.index != 0"> {{card.index}} </div>
-          <div class="fa icon" ng-class="{'fa-tree': card.house==houseConstants.CLUB, 'fa-heart': card.house==houseConstants.HEART, 'fa-diamond': card.house==houseConstants.DIAMOND, 'fa-space-shuttle': card.house==houseConstants.SPADE}"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="heartHouse" class="col-sm-3">
-      <div class="col-sm-12 single-card" ng-repeat="card in heartCards">
-        <div class="panel panel-primary">
-          <div class="title" ng-if="card.index == 0"> All Hearts </div>
-          <div class="title" ng-if="card.index != 0"> {{card.index}} </div>
-          <div class="fa icon" ng-class="{'fa-tree': card.house==houseConstants.CLUB, 'fa-heart': card.house==houseConstants.HEART, 'fa-diamond': card.house==houseConstants.DIAMOND, 'fa-space-shuttle': card.house==houseConstants.SPADE}"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="diamondHouse" class="col-sm-3">
-      <div class="col-sm-12 single-card" ng-repeat="card in diamondCards">
-        <div class="panel panel-primary">
-          <div class="title" ng-if="card.index == 0"> All Diamonds </div>
-          <div class="title" ng-if="card.index != 0"> {{card.index}} </div>
-          <div class="fa icon" ng-class="{'fa-tree': card.house==houseConstants.CLUB, 'fa-heart': card.house==houseConstants.HEART, 'fa-diamond': card.house==houseConstants.DIAMOND, 'fa-space-shuttle': card.house==houseConstants.SPADE}"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="spadeHouse" class="col-sm-3">
-      <div class="col-sm-12 single-card" ng-repeat="card in spadeCards">
-        <div class="panel panel-primary">
-          <div class="title" ng-if="card.index == 0"> All Spade </div>
-          <div class="title" ng-if="card.index != 0"> {{card.index}} </div>
-          <div class="fa icon" ng-class="{'fa-tree': card.house==houseConstants.CLUB, 'fa-heart': card.house==houseConstants.HEART, 'fa-diamond': card.house==houseConstants.DIAMOND, 'fa-space-shuttle': card.house==houseConstants.SPADE}"></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div><br>
-
-</div>
-
 </body>
-</html>
